@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Example</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="car-cards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    .m-container{
+        margin-top: 8rem;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar  -->
+     <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="web-logo">
+                    <a href="#" class="navbar-logo">
+                        <svg width="48px" height="48px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd"><path class="rui-w4DG7" d="M661.333 256v512h-128v-512h128zM277.333 298.667c117.824 0 213.333 95.531 213.333 213.333s-95.509 213.333-213.333 213.333c-117.824 0-213.333-95.531-213.333-213.333s95.509-213.333 213.333-213.333zM794.496 384l37.504 37.504 37.504-37.504h90.496v90.496l-37.504 37.504 37.504 37.504v90.496h-90.496l-37.504-37.504-37.504 37.504h-90.496v-90.496l37.504-37.504-37.504-37.504v-90.496h90.496zM277.333 426.667c-47.061 0-85.333 38.293-85.333 85.333s38.272 85.333 85.333 85.333c47.061 0 85.333-38.293 85.333-85.333s-38.272-85.333-85.333-85.333z"></path></svg>
+                    </a>
+                </div>
+
+                <div class="search-location">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input type="text" value="India">
+                    <div class="down-aero-icon">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                 
+                </div>
+    
+                <div class="navbar-search">
+                    <input type="text" placeholder="Find Cars, Mobile Phones and mare... " class="search-input">
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                </div>
+                
+                <div class="lang">
+                    <span>English</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+
+                <div class="login">
+                    <div class="login-sub1">
+                        <a href="Login.html">Login</a>
+                        <div></div>
+                    </div>
+                    <div class="login-sub2">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>SELL</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="hrline"></div>
+
+        <div class="navbar-categories">
+            <p>
+                All Categories 
+                <i class="fa-solid fa-angle-down"></i>
+            </p>
+            <div class="categories-list">
+
+                <a href="rey2.html">Cars</a>
+                <a href="rey2.html">Motorcycles</a>
+                <a href="nav.html">Mobile Phones</a>
+                <a class="none" href="rey2.html">For Sale: Houses & Apartments</a>
+                <a href="rey2.html">Scooters</a>
+                <a class="none" href="rey2.html">Commercial & Other Vehicles</a>
+                <a class="none" href="nav.html">For Rent: Houses & Apartments</a>
+            </div>
+        </div>
+    </header>
+
+
+    <h2>Buy & Sell Used Cars in Karnataka</h2>
+    <div class="m-container">
+       
+        <div class="main-container">
+            <div class="sidebar-c">
+                <!-- Categories  -->
+
+                <div class="categories">
+                    <h2 id="ct">CATEGORIES</h2>
+                    <ul>
+                        <li>All Categories</li>
+                        <li class="highlight">Cars <span>(33,675)</span></li>
+                    </ul>
+                </div>
+
+
+                <!-- location  -->
+
+                <div class="sidebar">
+                    <h2>LOCATIONS</h2>
+                    <ul class="location-list">
+                        <li class="location-item">
+                            <div class="toggle">India</div>
+                            <ul class="city-list">
+                                <li class="location-item">
+                                    <div class="toggle" id="Kr">Karnataka</div>
+                                    <ul class="city-list">
+                                        <li>Bengaluru (14,692)</li>
+                                        <li>Mysuru (1,143)</li>
+                                        <li>Mangaluru (741)</li>
+                                        <li>Hubballi (554)</li>
+                                        <li>Belagavi (374)</li>
+                                        <li>Bengaluru (14,692)</li>
+                                        <li>Mysuru (1,143)</li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- brand section  -->
+
+                <div class="filter-container"> <br>
+                    <!-- <div class="filter-title">Filters</div> -->
+
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            BRAND AND MODEL
+                        </div>
+                        <div class="filter-content">
+                            <input type="text" placeholder="Search brand or model"><br><br>
+                            <div class="card">
+                                <div class="card-header">
+                                    ALL BRANDS
+                                </div>
+                                <div class="card-content">
+                                    <label class="option">
+                                        <input type="checkbox">
+                                        Maruti Suzuki (6,412)
+                                    </label>
+                                    <label class="option">
+                                        <input type="checkbox">
+                                        Hyundai (4,045)
+                                    </label>
+                                    <label class="option">
+                                        <input type="checkbox">
+                                        Toyota (1,789)
+                                    </label>
+                                    <label class="option">
+                                        <input type="checkbox">
+                                        Mahindra (1,624)
+                                    </label>
+                                    <label class="option">
+                                        <input type="checkbox">
+                                        Tata (1,392)
+                                    </label>
+                                    <label class="option">
+                                        <input type="checkbox">
+                                        Honda (1,197)
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                ALL MODELS
+                            </div>
+                            <div class="card-content">
+                                <label class="option">
+                                    <input type="checkbox">
+                                    Maruti Suzuki Swift (1,057)
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    Maruti Suzuki Swift Dzire (765)
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    Hyundai i20 (361)
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    Mahindra XUV500 (457)
+                                </label>
+                                <label class="option">
+                                    <input type="checkbox">
+                                    Volkswagen Polo (542)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- budget section  -->
+                <div class="dropdown">
+                    <h2>BUDGET</h2>
+                    <div class="dropdown-content">
+                        <p>Choose from options below</p>
+                        <ul>
+                            <li>Below 1 Lac <span>720+ cars</span></li>
+                            <li>1 Lac - 3 Lac <span>2,200+ cars</span></li>
+                            <li>2 Lac - 4 Lac <span>3,300+ cars</span></li>
+                            <li>3 Lac - 5 Lac <span>4,200 cars</span></li>
+                            <li>5 Lac and Above <span>12,500+ cars</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- year section  -->
+
+                <div class="filter-container">
+                    <!-- <div class="filter-title">Filters</div> -->
+
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            YEAR
+                        </div>
+                        <div class="filter-content">
+                            <div class="filter-options">
+                                <div class="filter-option">Under 2 Years <span>1,500+ cars</span></div>
+                                <div class="filter-option">Under 4 Years <span>3,500+ cars</span></div>
+                                <div class="filter-option">Under 5 Years <span>6,600+ cars</span></div>
+                                <div class="filter-option">7 Years and Above <span>13,700+ cars</span></div>
+                            </div>
+                            <span>Choose a range below</span><br><br>
+                            <div class="filter-range">
+                                <!-- <span>Choose a range below</span> <br> -->
+                                <input type="number" min="1900" max="2100" placeholder="2004">
+                                <span>to</span>
+                                <input type="number" min="1900" max="2100" placeholder="2024">
+                                <button>Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- owner section  -->
+                <div class="card">
+                    <div class="card-header">
+                        NO. OF OWNERS
+                    </div>
+                    <div class="card-content">
+                        <label class="option">
+                            <input type="checkbox">
+                            First (11,022)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            Second (6,705)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            Third (3,684)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            Fourth (1,232)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            More than Four (877)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- inspection section  -->
+
+                <div class="inspection">
+                    <div class="header" onclick="toggleOptions()">
+                        <h2>INSPECTION STATUS</h2>
+                        <!-- <span style="float:right; font-size:20px;">^</span> -->
+                    </div>
+                    <div class="options">
+                        Choose from below options
+                        <br><br>
+                        <input type="checkbox"> Inspected Cars Only (4)
+                    </div>
+                </div>
+
+                <!-- km driven section  -->
+                <div class="filter-container">
+                    <!-- <div class="filter-title">Filters</div> -->
+
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            KM DRIVEN
+                        </div>
+                        <div class="filter-content">
+                            <div class="filter-options">
+                                <div class="filter-option">Below 35000 km <span>1,900+ cars</span></div>
+                                <div class="filter-option">15000 km - 50000 km <span>3,500+ cars</span></div>
+                                <div class="filter-option">40000 km - 75000 km<span>4,100+ cars</span></div>
+                                <div class="filter-option">65000 km - 100000 km<span>4,500+ cars</span></div>
+                                <div class="filter-option">20000 km and above <span>13,700+ cars</span></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- fuel section  -->
+                <div class="card">
+                    <div class="card-header">
+                        FUEL
+                    </div>
+                    <div class="card-content">
+                        <label class="option">
+                            <input type="checkbox">
+                            Petrol (21,547)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            Diesel (11,440)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            LPG (272)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            CNG & Hybrids (323)
+                        </label>
+                        <label class="option">
+                            <input type="checkbox">
+                            Electric (213)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- TRANSMISSION SECTION  -->
+                <br>
+                <div class="filter-container">
+                    <!-- <div class="filter-title">Filters</div> -->
+
+                    <div class="filter-section">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            TRANSMISSION
+                        </div>
+                        <div class="filter-content">
+                            <div class="filter-options">
+                                <div class="filter-option">Automatic <span>5,200+ cars</span></div>
+                                <div class="filter-option">Manual <span>16,600+ cars</span></div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- cards section area  -->
+            <div class="cards-section">
+                <div class="c-main">
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,88,000</h2>
+                                <span>2015-664790.0 km</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Agu 13</span>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60" alt="2">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,67,000</h2>
+                                <span>2013-66690.0 km</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/dpvr1syoqb7o-IN/image;s=943x0;q=60" alt="3">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 17,90,000</h2>
+                                <span>2016-49000.0 km</span><br>
+                                <span id="c-name">Audi Q3</span><br>
+                                <span>Sector 29 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Jul 08</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/gh6ugayk4d392-IN/image;s=1080x1080" alt="4">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹8,55,000</h2>
+                                <span>2017-89794.0 km</span><br>
+                                <span id="c-name">Hyundai Creta</span><br>
+                                <span>Madhapur &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;6 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/sx57vr4oewpy2-IN/image;s=1080x1080" alt="5">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 19,50,000</h2>
+                                <span>2015-56000.0 km</span><br>
+                                <span id="c-name">BMW 3 Series GT</span><br>
+                                <span>Pramuj Swami kutir &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Set 13</span>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/xkyxcrx62s0x-IN/image;s=943x0;q=60" alt="6">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 7,45,000</h2>
+                                <span>2014-67480.0</span><br>
+                                <span id="c-name">Hyundai Exter</span><br>
+                                <span>Deralakattee &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;feb 5</span>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60"" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,56,000</h2>
+                                <span>2013-564690.0</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/dpvr1syoqb7o-IN/image;s=943x0;q=60" alt="3">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 17,90,000</h2>
+                                <span>2016-49000.0 km</span><br>
+                                <span id="c-name">Audi Q3</span><br>
+                                <span>Sector 29 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Jul 08</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/dpvr1syoqb7o-IN/image;s=943x0;q=60" alt="3">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 17,90,000</h2>
+                                <span>2016-49000.0 km</span><br>
+                                <span id="c-name">Audi Q3</span><br>
+                                <span>Sector 29 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Jul 08</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60"" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,56,000</h2>
+                                <span>2013-564690.0</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60"" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,56,000</h2>
+                                <span>2013-564690.0</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60"" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,56,000</h2>
+                                <span>2013-564690.0</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60"" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,56,000</h2>
+                                <span>2013-564690.0</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60"" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,56,000</h2>
+                                <span>2013-564690.0</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/6vd30kx0cu7b1-IN/image;s=943x0;q=60"" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 13,56,000</h2>
+                                <span>2013-564690.0</span><br>
+                                <span id="c-name">Nissam Terrano</span><br>
+                                <span>Kasna &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Aug 23</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/zd5r9pic5hra-IN/image;s=1080x1080" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 5,90,000</h2>
+                                <span>2013-68000.0</span><br>
+                                <span id="c-name">Skoda Octavia</span><br>
+                                <span>Sector 19D &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Jan 12</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/zd5r9pic5hra-IN/image;s=1080x1080" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 5,90,000</h2>
+                                <span>2013-68000.0</span><br>
+                                <span id="c-name">Skoda Octavia</span><br>
+                                <span>Sector 19D &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Jan 12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/wvo5bnz0lzop3-IN/image;s=1080x1080" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 27,50,000</h2>
+                                <span>2017-1020000.0 km</span><br>
+                                <span id="c-name">Mercedes-Benz Glc</span><br>
+                                <span>venktagiri &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;28-May-24</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/zd5r9pic5hra-IN/image;s=1080x1080" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 5,90,000</h2>
+                                <span>2013-68000.0</span><br>
+                                <span id="c-name">Skoda Octavia</span><br>
+                                <span>Sector 19D &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Jan 12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/wvo5bnz0lzop3-IN/image;s=1080x1080" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 27,50,000</h2>
+                                <span>2017-1020000.0 km</span><br>
+                                <span id="c-name">Mercedes-Benz Glc</span><br>
+                                <span>venktagiri &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;28-May-24</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/zd5r9pic5hra-IN/image;s=1080x1080" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 5,90,000</h2>
+                                <span>2013-68000.0</span><br>
+                                <span id="c-name">Skoda Octavia</span><br>
+                                <span>Sector 19D &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Jan 12</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="img">
+                            <img src="https://apollo.olx.in/v1/files/wvo5bnz0lzop3-IN/image;s=1080x1080" alt="">
+                        </div>
+                        <div class="cd">
+                            <div class="carr-down">
+                                <h2> ₹ 27,50,000</h2>
+                                <span>2017-1020000.0 km</span><br>
+                                <span id="c-name">Mercedes-Benz Glc</span><br>
+                                <span>venktagiri &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;28-May-24</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="load-more">
+                        <a href="">Load More</a>
+                    </div>
+    
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    
+
+
+    <script>
+        document.querySelectorAll('.toggle').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentNode.classList.toggle('active');
+            });
+        });
+        function toggleFilter(element) {
+            element.classList.toggle('active');
+            const content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+        // budget section 
+        document.querySelector('.dropdown h2').addEventListener('click', function () {
+            this.classList.toggle('active');
+            let content = document.querySelector('.dropdown-content');
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Initialize dropdown content to be hidden
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.dropdown-content').style.display = 'none';
+        });
+
+        // year section 
+        function toggleFilter(element) {
+            element.classList.toggle('active');
+            const content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        // insdpection section 
+
+
+    </script>
+
+
+
+</body>
+
+</html>
